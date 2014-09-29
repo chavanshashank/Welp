@@ -15,6 +15,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
@@ -26,6 +27,8 @@ public class FullScreenImageAdapter extends PagerAdapter {
 	private ArrayList<String> _imagePaths;
 	private LayoutInflater inflater;
 	Context cn;
+	
+	
 	
 	// constructor
 	public FullScreenImageAdapter(Activity activity,
@@ -48,7 +51,7 @@ public class FullScreenImageAdapter extends PagerAdapter {
 	@Override
     public Object instantiateItem(ViewGroup container, int position) {
         TouchImageView imgDisplay;
-        Button btnClose;
+        
         
         
         inflater = (LayoutInflater) _activity
@@ -57,8 +60,7 @@ public class FullScreenImageAdapter extends PagerAdapter {
                 false);
  
         imgDisplay = (TouchImageView) viewLayout.findViewById(R.id.imgDisplay);
-        btnClose = (Button) viewLayout.findViewById(R.id.btnClose);
-        btnClose.setVisibility(View.GONE);
+        
         
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
@@ -76,19 +78,8 @@ public class FullScreenImageAdapter extends PagerAdapter {
 			e.printStackTrace();
 		}
 		
-		if(position == _imagePaths.size() -1)
-			btnClose.setVisibility(View.VISIBLE);
         
-        // close button click event
-        btnClose.setOnClickListener(new View.OnClickListener() {			
-			@Override
-			public void onClick(View v) {
-				Intent in = new Intent(cn,com.thewelp.WelpActivity.class);
-				cn.startActivity(in);
-				_activity.finish();
-				_activity.overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
-			}
-		}); 
+        
 
         ((ViewPager) container).addView(viewLayout);
  

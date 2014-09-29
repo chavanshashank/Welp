@@ -1792,13 +1792,14 @@ containing a value of this type.
         public static final int ic_plusone_tall_off_client=0x7f020075;
         public static final int powered_by_google_dark=0x7f020076;
         public static final int powered_by_google_light=0x7f020077;
-        public static final int vpi__tab_indicator=0x7f020078;
-        public static final int vpi__tab_selected_focused_holo=0x7f020079;
-        public static final int vpi__tab_selected_holo=0x7f02007a;
-        public static final int vpi__tab_selected_pressed_holo=0x7f02007b;
-        public static final int vpi__tab_unselected_focused_holo=0x7f02007c;
-        public static final int vpi__tab_unselected_holo=0x7f02007d;
-        public static final int vpi__tab_unselected_pressed_holo=0x7f02007e;
+        public static final int rounded_celll=0x7f020078;
+        public static final int vpi__tab_indicator=0x7f020079;
+        public static final int vpi__tab_selected_focused_holo=0x7f02007a;
+        public static final int vpi__tab_selected_holo=0x7f02007b;
+        public static final int vpi__tab_selected_pressed_holo=0x7f02007c;
+        public static final int vpi__tab_unselected_focused_holo=0x7f02007d;
+        public static final int vpi__tab_unselected_holo=0x7f02007e;
+        public static final int vpi__tab_unselected_pressed_holo=0x7f02007f;
     }
     public static final class id {
         public static final int action_bar=0x7f050032;
@@ -1812,13 +1813,18 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f05001a;
         public static final int action_menu_presenter=0x7f05001b;
         public static final int action_mode_close_button=0x7f05003a;
-        public static final int action_settings=0x7f050056;
+        public static final int action_settings=0x7f05005b;
         public static final int activity_chooser_view_content=0x7f05003b;
         public static final int always=0x7f050010;
         public static final int beginning=0x7f050015;
         public static final int book_now=0x7f05002c;
         public static final int bottom=0x7f050003;
+        public static final int btn1=0x7f050056;
+        public static final int btn2=0x7f050057;
+        public static final int btn3=0x7f050058;
+        public static final int btn4=0x7f050059;
         public static final int btnClose=0x7f050055;
+        public static final int btnSkip=0x7f050054;
         public static final int buyButton=0x7f050026;
         public static final int buy_now=0x7f05002b;
         public static final int buy_with_google=0x7f05002a;
@@ -1842,7 +1848,7 @@ containing a value of this type.
         public static final int icon=0x7f050040;
         public static final int ifRoom=0x7f05000f;
         public static final int image=0x7f05003d;
-        public static final int imgDisplay=0x7f050054;
+        public static final int imgDisplay=0x7f05005a;
         public static final int listMode=0x7f050006;
         public static final int list_item=0x7f05003f;
         public static final int map=0x7f050052;
