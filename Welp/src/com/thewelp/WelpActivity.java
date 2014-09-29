@@ -11,6 +11,7 @@ public class WelpActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welp);
+		overridePendingTransition( android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 	}
 
 	@Override
