@@ -2,110 +2,131 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    
     android:background="@drawable/back" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-    
-    <Button
-        android:id="@+id/btnSkip"
+
+    <TextView
+        android:id="@+id/tvSkip"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:background="@drawable/button_background"
-        android:textColor="#ffffff"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="SKIP"
-        android:textSize="18dp"
+        android:clickable="true"
         android:onClick="closeActivity"
-         />
-        <Button
-        android:id="@+id/btnClose"
+        android:text="START"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tvFinish"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="15dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:background="@drawable/button_background"
-        android:textColor="#ffffff"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="FINISHED" 
-        android:textSize="18dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
         android:onClick="closeActivity"
-        />
+        android:text="FINISHED"
+        android:textColor="#fff"
+        android:textSize="18dp" />
 
-<RelativeLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-45dp"
+        android:orientation="vertical"
+        android:padding="15dip" >
 
-    android:orientation="vertical"
-    android:padding="15dip"
-    android:layout_marginLeft="-45dp"
-     >
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            android:height="10dp"
+            android:text="button1"
+            android:width="10dp" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/btn0"
+            android:background="#ffffff"
+            android:height="10dp"
+            android:text="button2"
+            android:width="10dp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/btn1"
+            android:background="#ffffff"
+            android:height="10dp"
+            android:text="button2"
+            android:width="10dp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/btn2"
+            android:background="#ffffff"
+            android:height="10dp"
+            android:text="button2"
+            android:width="10dp" />
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnFB"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/rounded_celll"
-        android:text="button1" 
+        android:layout_marginBottom="54dp"
+        android:text="Sign in/Sign Up using Facebook"
+        android:background="@drawable/button_background"
+        android:textColor="#fff"
+        android:textSize="18dp"
         
-        />
+         />
 
     <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dip"
-        android:layout_toRightOf="@id/btn1"
-        android:background="@drawable/rounded_celll"
-        
-        android:text="button2" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dip"
-        android:layout_toRightOf="@id/btn2"
-        android:background="@drawable/rounded_celll"
-       
-        android:text="button2" />
-
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dip"
-        android:layout_toRightOf="@id/btn3"
-        android:background="@drawable/rounded_celll"
-        
-        android:text="button2" />
-</RelativeLayout>
+        android:id="@+id/btnG"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_alignLeft="@+id/btnFB"
+        android:background="@drawable/button_background"
+        android:text="Sign in/Sign Up using Google"
+        android:textColor="#fff"
+        android:textSize="18dp" />
 
 </RelativeLayout>
