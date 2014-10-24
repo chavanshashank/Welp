@@ -20,7 +20,10 @@
         android:layout_marginBottom="11dp"
         android:text="User Agreement"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:clickable="true"
+        android:onClick="userAgree"
+         />
 
     <TextView
         android:id="@+id/textView2"

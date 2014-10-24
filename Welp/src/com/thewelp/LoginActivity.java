@@ -1,15 +1,13 @@
 package com.thewelp;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.webkit.WebView;
+
+
 
 public class LoginActivity extends ActionBarActivity {
 
@@ -27,6 +25,29 @@ public class LoginActivity extends ActionBarActivity {
 		
 	}
 	
+	public void userAgree(View v){
+		WebView webView = new WebView(this);
+	    webView.loadUrl("file:///android_asset/changelog-en.html");
+	    AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+	    dialog.setView(webView);
+	    dialog.setTitle("User Agreement");
+	 // Add action buttons
+        dialog.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                // sign in the user ...
+            	dialog.cancel();
+            }
+        });
+        dialog.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                LoginActivity.this.finish();
+               
+            }
+        }); 
+	    dialog.show();
+		
+	}
 	
 }
 
