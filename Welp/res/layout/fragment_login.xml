@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="15dp"
         android:text="User Agreement"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#fff"
@@ -25,57 +25,74 @@
         android:onClick="userAgree"
          />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
-        android:layout_alignRight="@+id/button2"
-        android:layout_marginBottom="11dp"
-        android:text="SignIn with Email"
-        android:textColor="#fff"
-        android:textSize="16dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/button2"
-        android:text="SignUp with Email"
-        android:textColor="#fff"
-        android:textSize="16dp" />
-
-    <Button
-        android:id="@+id/button1"
+    <com.facebook.widget.LoginButton
+        xmlns:fb="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/btnFB"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/btnG"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/button_fblogin"
-        android:text="Sign in using Facebook"
+        fb:login_text="    Sign in using Facebook"
         android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/button2"
+    <com.google.android.gms.common.SignInButton
+
+
+        android:id="@+id/btnG"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignLeft="@+id/btnFB"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/button_googlelogin"
+        
+        android:text="Sign in using Google"
+        android:textColor="#fff" />
+    <com.google.android.gms.common.SignInButton
+
+
+        android:id="@+id/btnGLogout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/btnFB"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
         android:text="Sign in using Google"
         android:textColor="#fff" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignParentLeft="true"
+        android:layout_width="306dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/btnFB"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:src="@drawable/a" />
+
+    <TextView
+        android:id="@+id/signUpWithEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/imageView2"
+        android:clickable="true"
+        android:onClick="signUp"
+        android:text="SignUp with Email"
+        android:textColor="#fff"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignLeft="@+id/btnFB"
+        android:layout_marginBottom="15dp"
+        android:text="SignIn with Email"
+        android:textColor="#fff"
+        android:textSize="16dp" />
 
 </RelativeLayout>

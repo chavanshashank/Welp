@@ -1,0 +1,205 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.thewelp.SignupActivity"
+    android:textColor="#fff" >
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg1" />
+
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        >
+	
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical"
+  			
+             >
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:src="@drawable/com_facebook_profile_picture_blank_square"
+                android:layout_gravity="center"
+                 />
+                 
+           <com.facebook.widget.ProfilePictureView 
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:id="@+id/profilePicture"
+                	android:layout_gravity="center"
+                	android:visibility="gone"
+                	>
+                
+            </com.facebook.widget.ProfilePictureView> 
+            
+            <LinearLayout 
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+        		android:layout_height="match_parent"
+        		android:layout_marginTop="15dp"
+        		
+        		 >
+                <EditText
+                	android:id="@+id/fname"
+                	android:layout_width="match_parent"
+                	android:layout_height="35dp"
+                	android:hint="First Name"
+    				android:drawableLeft="@drawable/signup_person"
+    				android:inputType="text"
+                	android:maxLines="1"
+                	android:singleLine="true"
+                	android:layout_weight="1"
+                	android:background="@drawable/edittext_back"
+                	android:paddingLeft="10dp"
+                	
+                	/>
+                <EditText
+                	android:id="@+id/lname"
+                	android:layout_width="match_parent"
+                	android:layout_height="35dp"
+                	android:hint="Last Name"
+                	android:inputType="text"
+                	android:maxLines="1"
+                	android:singleLine="true"
+                	android:layout_weight="1" 
+                	android:background="@drawable/edittext_back"
+                	android:layout_marginLeft="3dp"
+                	android:paddingLeft="10dp"/>
+                
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_back"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/signup_email" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_back" 
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/signup_password_ico"
+                />
+            
+            <EditText
+                android:id="@+id/bday"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Birthdate"
+                android:inputType="date"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_back"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/signup_birthday"
+                 />
+            
+            <EditText
+                android:id="@+id/mobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_back"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/signup_mobile" />
+            
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Gender"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_back"
+                android:layout_marginTop="3dp" 
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/signup_gender"/>
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_back"
+                
+                android:text="Sign Up"
+                android:textColor="#fff" />
+            
+            <TextView 
+                android:id="@+id/userAgreeSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center_horizontal"
+                android:text="By Signing Up you agee User Agreement and TOC."
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</merge>
